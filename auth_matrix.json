@@ -1,0 +1,192 @@
+[
+ {
+  "endpoint": "clientitems/DST/Tick",
+  "cells": [
+   "OK",
+   "E_INVALID_TOKEN",
+   "OK",
+   "E_INVALID_TOKEN"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/GetAllItems",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "HTTP 200",
+   "E_INVALID_TOKEN",
+   "HTTP 200"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "clientitems/DST/DailyGift",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "OK",
+   "E_INVALID_TOKEN",
+   "OK"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "clientitems/DST/ValidateItems",
+  "cells": [
+   "E_INVALID_KU",
+   "E_INVALID_KU",
+   "E_INVALID_KU",
+   "E_INVALID_KU"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/ValidateSignature",
+  "cells": [
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/GrantSkinDLCEntitlements",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "OK",
+   "E_INVALID_TOKEN",
+   "OK"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "clientitems/DST/VerifyGiftingReceipt",
+  "cells": [
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/OpenMysteryBox",
+  "cells": [
+   "E_INVALID_ITEMID",
+   "E_INVALID_ITEMID",
+   "E_INVALID_ITEMID",
+   "E_INVALID_ITEMID"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/RedeemCode",
+  "cells": [
+   "E_INVALID_CODE",
+   "E_INVALID_CODE",
+   "E_INVALID_CODE",
+   "E_INVALID_CODE"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/SetItemOpened",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "OK",
+   "E_INVALID_TOKEN",
+   "OK"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "clientitems/DST/ReportUnknownItemType",
+  "cells": [
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500",
+   "HTTP 500"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "clientitems/DST/Swap",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "HTTP 500",
+   "E_INVALID_TOKEN",
+   "HTTP 500"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "gameevents/DontStarveTogether/KeyValuesSet",
+  "cells": [
+   "HTTP 500",
+   "E_INVALID_TOKEN",
+   "HTTP 500",
+   "E_INVALID_TOKEN"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "gameevents/DontStarveTogether/KeyValuesSetMulti",
+  "cells": [
+   "error",
+   "E_INVALID_TOKEN",
+   "error",
+   "E_INVALID_TOKEN"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "gameevents/DontStarveTogether/KeyValuesGetMulti",
+  "cells": [
+   "error",
+   "E_INVALID_TOKEN",
+   "error",
+   "E_INVALID_TOKEN"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "gameevents/DST/GetStatus",
+  "cells": [
+   "HTTP 500",
+   "E_INVALID_TOKEN",
+   "HTTP 500",
+   "E_INVALID_TOKEN"
+  ],
+  "auth_field": "Token"
+ },
+ {
+  "endpoint": "iap/DST/GetPricingInfo",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "HTTP 200",
+   "E_INVALID_TOKEN",
+   "HTTP 200"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "iap/DST/PurchaseCreate",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "HTTP 500",
+   "E_INVALID_TOKEN",
+   "HTTP 500"
+  ],
+  "auth_field": "ClientToken"
+ },
+ {
+  "endpoint": "iap/DST/BarterDuplicateItems",
+  "cells": [
+   "E_INVALID_TOKEN",
+   "OK",
+   "E_INVALID_TOKEN",
+   "OK"
+  ],
+  "auth_field": "ClientToken"
+ }
+]

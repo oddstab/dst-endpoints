@@ -1,0 +1,612 @@
+[
+ {
+  "group": "control",
+  "name": "login bogus path",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/ThisPathIsNotReal",
+  "note": "calibration",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "control",
+  "name": "items bogus path",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/ThisPathIsNotReal",
+  "note": "calibration",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal server error"
+ },
+ {
+  "group": "control",
+  "name": "lobby bogus path",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/ThisPathIsNotReal",
+  "note": "calibration",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "LoginViaSteam (no ticket)",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/LoginViaSteam",
+  "note": "route only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_STEAM_TICKET"
+ },
+ {
+  "group": "auth",
+  "name": "RegisterSteamAccount",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/RegisterSteamAccount",
+  "note": "route only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "ServerLoginTokenViaSteam",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/ServerLoginTokenViaSteam",
+  "note": "route only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_NO_AUTH"
+ },
+ {
+  "group": "auth",
+  "name": "Login",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/Login",
+  "note": "route only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "CreateAccount",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/CreateAccount",
+  "note": "route only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "TokenPurpose",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/TokenPurpose",
+  "note": "route only",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"SecurityTxt\": \"https://www.klei.com/.well-known/security.txt\", \"Error\": false, \"Token\": \"pcl-sing^<redacted>", \"UserID\": \"KU_XXXX-XXXX\", \"ApuIDs\": {}, \"Li"
+ },
+ {
+  "group": "auth",
+  "name": "ChangePassword",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/ChangePassword",
+  "note": "empty payload only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "RegisterGameKey",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/RegisterGameKey",
+  "note": "empty payload only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "RecoverPassword",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/RecoverPassword",
+  "note": "route only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "ReportUser",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/ReportUser",
+  "note": "empty payload only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "auth",
+  "name": "GameSessionToken",
+  "method": "POST",
+  "url": "https://login.kleientertainment.com/login/GameSessionToken",
+  "note": "route only",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"SecurityTxt\": \"https://www.klei.com/.well-known/security.txt\", \"Error\": false, \"Token\": \"pgs-sing^<redacted>", \"Key\": \"4o8ko3Xqti3O6MPIOwgGGcmKglGD5JQtVH"
+ },
+ {
+  "group": "auth",
+  "name": "auto",
+  "method": "GET",
+  "url": "https://login.kleientertainment.com/login/auto/?Game=DontStarveTogether",
+  "note": "browser redirect",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "404 page not found"
+ },
+ {
+  "group": "items",
+  "name": "Tick",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/Tick",
+  "note": "live",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"Error\": false, \"GiftReceived\": false}"
+ },
+ {
+  "group": "items",
+  "name": "GetAllItems",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/GetAllItems",
+  "note": "live",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"SecurityTxt\": \"https://www.klei.com/.well-known/security.txt\", \"Error\": false, \"InventoryStateToken\": \"\", \"EventHash\": \"4c0f5008\", \"Unchanged\": false, \"UserID\": \"KU_XXXX-XXXX\", \"Items\": [{\"ItemID\": 135943199673649592, \""
+ },
+ {
+  "group": "items",
+  "name": "DailyGift",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/DailyGift",
+  "note": "live",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"Error\": false, \"GiftReceived\": false}"
+ },
+ {
+  "group": "items",
+  "name": "ValidateItems",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/ValidateItems",
+  "note": "invalid payload",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_KU"
+ },
+ {
+  "group": "items",
+  "name": "ValidateSignature",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/ValidateSignature",
+  "note": "empty payload only",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal server error"
+ },
+ {
+  "group": "items",
+  "name": "GrantSkinDLCEntitlements",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/GrantSkinDLCEntitlements",
+  "note": "live",
+  "status": 200,
+  "verdict": "WORKS",
+  "detail": "{\"Error\": false, \"NewEntitlements\": null, \"AllEntitlements\": null}"
+ },
+ {
+  "group": "items",
+  "name": "VerifyGiftingReceipt",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/VerifyGiftingReceipt",
+  "note": "empty receipts",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal server error"
+ },
+ {
+  "group": "items",
+  "name": "OpenMysteryBox",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/OpenMysteryBox",
+  "note": "invalid id only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_ITEMID"
+ },
+ {
+  "group": "items",
+  "name": "RedeemCode",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/RedeemCode",
+  "note": "invalid code",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "items",
+  "name": "SetItemOpened",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/clientitems/DST/SetItemOpened",
+  "note": "invalid id only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "items",
+  "name": "KeyValuesSet",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/gameevents/DontStarveTogether/KeyValuesSet",
+  "note": "empty payload only",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal server error"
+ },
+ {
+  "group": "items",
+  "name": "KeyValuesSetMulti",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/gameevents/DontStarveTogether/KeyValuesSetMulti",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{}"
+ },
+ {
+  "group": "items",
+  "name": "KeyValuesGetMulti",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/gameevents/DontStarveTogether/KeyValuesGetMulti",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{\"Events\":{}}"
+ },
+ {
+  "group": "items",
+  "name": "gameevents/DST/GetStatus",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/gameevents/DST/GetStatus",
+  "note": "live",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal server error"
+ },
+ {
+  "group": "iap",
+  "name": "GetPricingInfo",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/GetPricingInfo",
+  "note": "live",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "PurchaseCreate",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/PurchaseCreate",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "PurchaseComplete",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/PurchaseComplete",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "PurchaseWithCurrency",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/PurchaseWithCurrency",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "BarterGainItem",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/BarterGainItem",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "BarterLoseItem",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/BarterLoseItem",
+  "note": "empty payload only",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "iap",
+  "name": "BarterDuplicateItems",
+  "method": "POST",
+  "url": "https://items.kleientertainment.com/iap/DST/BarterDuplicateItems",
+  "note": "live",
+  "status": 200,
+  "verdict": "REACHABLE",
+  "detail": "E_INVALID_TOKEN"
+ },
+ {
+  "group": "lobby",
+  "name": "read",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/read",
+  "note": "route only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "{\"Error\":{\"Code\":\"E_AUTH_FAILURE\"}}"
+ },
+ {
+  "group": "lobby",
+  "name": "getIP",
+  "method": "GET",
+  "url": "https://lobby-v2.klei.com/lobby/getIP",
+  "note": "live",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{\"__addr\":\"<public-ip>\"}"
+ },
+ {
+  "group": "lobby",
+  "name": "write",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/write",
+  "note": "empty payload only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "{\"Error\":{\"Code\":\"E_AUTH_FAILURE\"}}"
+ },
+ {
+  "group": "lobby",
+  "name": "update",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/update",
+  "note": "empty payload only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "{\"Error\":{\"Code\":\"E_AUTH_FAILURE\"}}"
+ },
+ {
+  "group": "lobby",
+  "name": "delete",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/delete",
+  "note": "empty payload only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "{\"Error\":{\"Code\":\"E_AUTH_FAILURE\"}}"
+ },
+ {
+  "group": "lobby",
+  "name": "keepAlive",
+  "method": "POST",
+  "url": "https://lobby-v2.klei.com/lobby/keepAlive",
+  "note": "empty payload only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "{\"Error\":{\"Code\":\"E_AUTH_FAILURE\"}}"
+ },
+ {
+  "group": "lobby",
+  "name": "regioncapabilities",
+  "method": "GET",
+  "url": "https://lobby-v2-cdn.klei.com/regioncapabilities-v2.json",
+  "note": "live",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{\r\n    \"LobbyRegions\": [\r\n        {\r\n            \"Region\": \"us-east-1\"\r\n        },\r\n        {\r\n     "
+ },
+ {
+  "group": "other",
+  "name": "motd",
+  "method": "GET",
+  "url": "https://motd.klei.com/motd.json/?game=dst&platform=STEAM&locale=TW&lang=tchinese&version=762172",
+  "note": "live",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{\n    \"Audience\": \"DST\",\n    \"live-version\": \"736805\",\n    \"testing-version\": \"\",\n    \"boxes-live\": "
+ },
+ {
+  "group": "other",
+  "name": "metrics",
+  "method": "GET",
+  "url": "https://dst.metrics.klei.com/write",
+  "note": "reachability only",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "{\"Error\":{\"Code\":\"E_BAD_REQUEST\"},\"EventCount\":0}"
+ },
+ {
+  "group": "other",
+  "name": "analysisCL",
+  "method": "GET",
+  "url": "https://clientservice.kleientertainment.com/analysisCL",
+  "note": "reachability only",
+  "status": -1,
+  "verdict": "UNREACHABLE",
+  "detail": "<urlopen error [Errno 11001] getaddrinfo failed>"
+ },
+ {
+  "group": "other",
+  "name": "analytics-staging",
+  "method": "GET",
+  "url": "https://analytics-staging.office.kleientertainment.com/write",
+  "note": "reachability only",
+  "status": -1,
+  "verdict": "UNREACHABLE",
+  "detail": "<urlopen error [WinError 10060] 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。>"
+ },
+ {
+  "group": "other",
+  "name": "games-feedback",
+  "method": "GET",
+  "url": "https://games-feedback.klei.com/submit",
+  "note": "reachability only",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal Server Error"
+ },
+ {
+  "group": "other",
+  "name": "crash-reporter",
+  "method": "GET",
+  "url": "http://crashes.klei.ca/submitCrash",
+  "note": "reachability only",
+  "status": 500,
+  "verdict": "HTTP 500",
+  "detail": "Internal Server Error"
+ },
+ {
+  "group": "other",
+  "name": "cloudfront",
+  "method": "GET",
+  "url": "https://d21wmy1ql1e52r.cloudfront.net/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "s3 ds-motd",
+  "method": "GET",
+  "url": "https://s3.amazonaws.com/ds-motd/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "ds-motd s3 alias",
+  "method": "GET",
+  "url": "https://ds-motd.s3.amazonaws.com/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "klei-motd",
+  "method": "GET",
+  "url": "https://klei-motd.klei.com/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "s3 ds-mod-language",
+  "method": "GET",
+  "url": "https://s3.amazonaws.com/ds-mod-language/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "s3 dstbuilds",
+  "method": "GET",
+  "url": "https://s3.amazonaws.com/dstbuilds/",
+  "note": "reachability only",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-"
+ },
+ {
+  "group": "other",
+  "name": "s3 kleifiles",
+  "method": "GET",
+  "url": "https://s3-us-west-2.amazonaws.com/kleifiles/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "translation-mods",
+  "method": "GET",
+  "url": "https://dst-translation-mods.klei.com/",
+  "note": "reachability only",
+  "status": 403,
+  "verdict": "HTTP 403",
+  "detail": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Messa"
+ },
+ {
+  "group": "other",
+  "name": "theforge",
+  "method": "GET",
+  "url": "https://theforge.kleientertainment.com/",
+  "note": "reachability only",
+  "status": -1,
+  "verdict": "UNREACHABLE",
+  "detail": "<urlopen error [Errno 11001] getaddrinfo failed>"
+ },
+ {
+  "group": "other",
+  "name": "appspot release",
+  "method": "GET",
+  "url": "http://dontstarve-release.appspot.com/",
+  "note": "reachability only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>404 Not Found"
+ },
+ {
+  "group": "other",
+  "name": "appspot dev",
+  "method": "GET",
+  "url": "http://dontstarve-dev.appspot.com/",
+  "note": "reachability only",
+  "status": 404,
+  "verdict": "NOT FOUND",
+  "detail": "<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>404 Not Found"
+ },
+ {
+  "group": "other",
+  "name": "accounts rewards",
+  "method": "GET",
+  "url": "https://accounts.klei.com/account/rewards",
+  "note": "browser page",
+  "status": 200,
+  "verdict": "HTTP 200",
+  "detail": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <title>Klei Account</title>\n "
+ }
+]
